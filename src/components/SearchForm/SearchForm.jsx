@@ -3,6 +3,7 @@ const SearchForm = ({ onSearch }) => {
     event.preventDefault();
     const form = event.target;
     const topic = form.elements.topic.value;
+    console.log(topic);
     if (form.elements.topic.value.trim() === "") {
       alert("Please enter search term!");
       return;
@@ -15,7 +16,7 @@ const SearchForm = ({ onSearch }) => {
   return (
     <form onSubmit={handleSubmit}>
       <input type="text" name="topic" />
-      <button>Search</button>
+      <button type="submit">Search</button>
     </form>
   );
 };

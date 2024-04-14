@@ -6,7 +6,7 @@ const ArticleList = ({ items }) => {
       {items &&
         items.map((item) => {
           return (
-            <li key={item.id}>
+            <li key={item.objectID}>
               <Article item={item} />
             </li>
           );
