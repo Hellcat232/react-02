@@ -3,7 +3,7 @@ import { useState } from "react";
 import ArticleList from "../ArticleList/ArticleList.jsx";
 import { ArticlesWithTopic } from "../../api.js";
 import SearchForm from "../SearchForm/SearchForm.jsx";
-
+import Player from "../Player/Player.jsx";
 const App = () => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -51,6 +51,8 @@ const App = () => {
       )}
       {articles.length > 0 && <ArticleList items={articles} />}
       {/* <ArticleList items={articles} /> */}
+
+      <Player source="<http://media.w3.org/2010/05/sintel/trailer.mp4>" />
     </div>
   );
 };
